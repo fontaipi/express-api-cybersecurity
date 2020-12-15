@@ -1,0 +1,22 @@
+{
+  "name": "deckofcards-api",
+  "version": "1.0.0",
+  "description": "API to simulate \u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[DREST API to simulate a deck of cards.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fontaipi/express-api-cybersecurity.git"
+  },
+  "author": "Pierre FONTAINE",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fontaipi/express-api-cybersecurity/issues"
+  },
+  "homepage": "https://github.com/fontaipi/express-api-cybersecurity#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
