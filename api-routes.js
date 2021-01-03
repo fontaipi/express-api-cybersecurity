@@ -10,6 +10,15 @@ router.get('/', function (req, res) {
 var categoryController = require('./controller/categoryController');// Category routes
 var utensilController = require('./controller/utensilController');// Utensil routes
 
+router.route('/categories')
+    .get(categoryController.index)
+    .post(categoryController.new);
+router.route('/categories/:category_id')
+    .get(categoryController.view)
+    .patch(categoryController.update)
+    .put(categoryController.update)
+    .delete(categoryController.delete);// Export API routes
+
 router.route('/utensils')
     .get(utensilController.index)
     .post(utensilController.new);
