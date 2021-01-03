@@ -15,17 +15,31 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 // Connect to Mongoose and set connection variable
-mongoose.connect('mongodb://localhost/deckofcards', { useNewUrlParser: true});
-var db = mongoose.connection;
 
-// Added check for DB connection
-if(!db)
-    console.log("Error connecting db")
-else
-    console.log("Db connected successfully")
+const options = {
+    autoIndex: false, // Don't build indexes
+    reconnectTries: 30, // Retry up to 30 times
+    reconnectInterval: 500, // Reconnect every 500ms
+    poolSize: 10, // Maintain up to 10 socket connections
+    // If not connected, return errors immediately rather than waiting for reconnect
+    bufferMaxEntries: 0
+}
+
+const connectWithRetry = () => {
+    console.log('MongoDB connection with retry')
+    mongoose.connect("mongodb://mongo:27017/kitchenware", options).then(()=>{
+        console.log('MongoDB is connected')
+    }).catch(err=>{
+        console.log('MongoDB connection unsuccessful, retry after 5 seconds.')
+        setTimeout(connectWithRetry, 5000)
+    })
+}
+
+connectWithRetry()
+
 
 // Setup server port
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 3000;
 
 // Send message for default URL
 app.get('/', (req, res) => res.send('Hello World with Express'));
@@ -35,5 +49,5 @@ app.use('/api', apiRoutes);
 
 // Launch app to listen to specified port
 app.listen(port, function () {
-    console.log("Running DeckofCards on port " + port);
+    console.log("Running App on port " + port);
 });
