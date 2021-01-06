@@ -10,6 +10,8 @@ Run the command :
 
 `docker-compose up`
 
+The app is running on http://localhost:3000/
+
 # Security
 
 [![](https://mermaid.ink/img/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBKC91dGVuc2lscykgLS0-XG4gICAgQih1dGVuc2lscykgLS0-IEdcbiAgICBDKC91dGVuc2lscy86aWQpIC0tPiBCXG4gICAgRCgvY2F0ZWdvcmllcykgLS0-IEZcbiAgICBFKC9jYXRlZ29yaWVzLzppZCktLT4gRlxuICAgIEYoY2F0ZWdvcmllcykgLS0-IEdcbiAgICBHWyhNb25nb0RCKV1cbiIsIm1lcm1haWQiOnt9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)](https://mermaid-js.github.io/mermaid-live-editor/#/edit/eyJjb2RlIjoiZ3JhcGggTFJcbiAgICBBKC91dGVuc2lscykgLS0-XG4gICAgQih1dGVuc2lscykgLS0-IEdcbiAgICBDKC91dGVuc2lscy86aWQpIC0tPiBCXG4gICAgRCgvY2F0ZWdvcmllcykgLS0-IEZcbiAgICBFKC9jYXRlZ29yaWVzLzppZCktLT4gRlxuICAgIEYoY2F0ZWdvcmllcykgLS0-IEdcbiAgICBHWyhNb25nb0RCKV1cbiIsIm1lcm1haWQiOnt9LCJ1cGRhdGVFZGl0b3IiOmZhbHNlfQ)
