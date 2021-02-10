@@ -47,7 +47,7 @@ Nous utilisons `npm` comme gestionnaire de package. Il est donc important d'util
 L'API est accessible par tout utilisateur connaissant l'URL à requêter. Il serait intéressant d'ajouter un service d’authentification afin de restreindre cet accès comme un accès restreint via une API Key.
 
 
-Objectifs : 
+# Objectifs
 
 Confidentialité : La base est créé sur un serveur physique. Les données qui y sont contenus ne sont pas senssible. Un éventuelle fuite de ces informations ne sera pas crtitique. (1/5)
 
