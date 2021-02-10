@@ -31,15 +31,17 @@ The app is running on http://localhost:3000/
 | PUT    | /categories/:id | Update a category by id  |
 | DELETE | /categories/:id | Delete a category by id  |
 
+
+
 Objectifs : 
 
-Confidentialité : La base est créé localement pour chaque utilisateur. Il faudrait développer un version de production pour modifier cela (0/5)
+Confidentialité : La base est créé sur un serveur physique. Les données qui y sont contenus ne sont pas senssible. Un éventuelle fuite de ces informations ne sera pas crtitique. (1/5)
 
-Intégrité : Toutes les routes de l'API sont accessible sans token. (0/5)
+Intégrité : Toutes les données dont contenus sur notre serveur physique et non dans le cloud. Pour l'instant aucune sauvegarde n'est faite dans le cloud ou sur une machine de secours. Si le machine qui héberge la base Mongo venais à étre comprimise, l'intégralité des données pourraient être perdues. (4/5)
 
-Disponiblité : La base est uniquement créé en local à chaque lancement de l'application il n'y a donc pas de persistance. (0/5)
+Disponiblité : L'accès à la base de donnée ne se fait pas dans le cloud, de ce fait la disponibilité du service dépend de l'état du serveur faisant tourner l'application. Aucune statégie de disponibilité n'as été mise en place pour assurer un fonctionnement sans coupure. En revanche une perte de disponibilité ne sera pas critique pour l'application. (1/5)
 
-Traçabilité : Toutes mes modification apparaisent dans les logs de MongoDB. (5/5)
+Traçabilité : Toutes mes modification apparaisent dans les logs de MongoDB. Le base ne contiens pas de données sensible, il n'est donc pas primordial d'avoir une tracabilité maximale sur l'accès aux données. (1/5)
 
 # Author
 
